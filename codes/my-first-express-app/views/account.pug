@@ -1,0 +1,9 @@
+extends layout.pug
+block appContent
+    h1 Xullnn
+    h2 You have: #{money} dollars.
+    if !recentTransaction
+      p No recent Transaction
+    else
+      p Rencent Transaction
+    button Login
