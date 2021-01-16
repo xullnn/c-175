@@ -93,7 +93,9 @@ app.use((req, res, next) => {
   if (!("contactData" in req.session)) {
     req.session.contactData = clone(contactData);
   } else {
-    console.log(req.session)
+    console.log(`This is session identifer: ${req.session.id}`);
+    console.log("This is session cookie sent back to the client\n", req.session.cookie);
+    console.log("This is the session data 'contactData' gets stored on the server side\n", req.session.contactData)
   }
   next();
 });
